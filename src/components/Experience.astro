@@ -1,0 +1,22 @@
+---
+import ExperiencieItem from "./ExperiencieItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Septiembre 2023",
+    title: "Diseño & Desarrollo Web",
+    description:
+      "Desarrollo y diseño de una landing page para la Startup Magical20. Uso de tecnologias como Astro, Tailwindcss y Deno.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-2.5">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperiencieItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

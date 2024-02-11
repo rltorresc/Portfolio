@@ -1,0 +1,27 @@
+---
+import Badge from "@/components/Badge.astro";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import SocialPill from "@/components/Icons/SocialPill.astro";
+import LinkIn from "@/components/Icons/LinkIn.astro";
+---
+
+<Layout title="Design System" description="Catálogo de componentes">
+  <Section class="py-44 pb-32 flex flex-col gap-y-10">
+    <article class="mb-10">
+      <h1 class="mb-4 text-xl">&lt;Badge /&gt</h1>
+
+      <Badge>Disponible para trabajar</Badge>
+    </article>
+
+    <article class="mb-10">
+      <h1 class="mb-4 text-xl">&lt SocialPill /&gt;</h1>
+      <div class="flex">
+        <SocialPill href="https://www.linkedin.com/in/raultc/">
+          <LinkIn class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+      </div>
+    </article>
+  </Section>
+</Layout>

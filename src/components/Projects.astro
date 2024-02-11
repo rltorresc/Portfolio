@@ -1,0 +1,61 @@
+---
+import tailwindConfig from "../../tailwind.config.mjs";
+import Tailwind from "../components/Icons/Tailwind.astro";
+import React from "../components/Icons/React.astro";
+import AstroIcon from "./Icons/AstroIcon.astro";
+
+const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#302665] text-white",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#24272f] text-white",
+    icon: React,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Magical20",
+    description:
+      "Creado desde cero, este proyecto es una landing page para una applicacion de juegos de rol por inteligencia artificial. Optimizado para SEO y accesibilidad.",
+    link: "#",
+    github: "https://github.com/rltorresc/Magical20-landingpage",
+    image: "public/projects/magical20.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-medium text-orange-500 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex flex-row mb-2 gap-x-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rouded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
