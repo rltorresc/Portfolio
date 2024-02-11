@@ -17,20 +17,6 @@ const THEMES = ["Light", "Dark"];
       class="theme-toggle-icon absolute size-5 transition-all"
     />
   </button>
-  <div
-    id="themes-menu"
-    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/70 dark:bg-gray-900/70 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
-  >
-    <ul>
-      {
-        THEMES.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
-            {theme}
-          </li>
-        ))
-      }
-    </ul>
-  </div>
 </div>
 
 <style>
@@ -92,16 +78,13 @@ const THEMES = ["Light", "Dark"];
 
   document.addEventListener("click", () => themesMenu.classList.remove("open"));
 
-  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isClosed = !themesMenu.classList.contains("open");
-    themesMenu.classList[isClosed ? "add" : "remove"]("open");
-  });
+  document.getElementById("theme-toggle-btn").addEventListener("click", () => {
+    // Alternar el tema entre 'light' y 'dark'
+    const currentTheme =
+      localStorage.getItem("theme") === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", currentTheme);
 
-  document.querySelectorAll(".themes-menu-option").forEach((element) => {
-    element.addEventListener("click", (e) => {
-      localStorage.setItem("theme", e.target.innerText.toLowerCase().trim());
-      updateTheme();
-    });
+    // Actualizar el tema en la página
+    updateTheme();
   });
 </script>

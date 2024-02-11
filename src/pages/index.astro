@@ -22,18 +22,18 @@ import SocialPill from "@/components/Icons/SocialPill.astro";
   <main class="px-4">
     <Section class="py-44 pb-32">
       <img
-        class="rounded-full size-12 mb-4"
+        class="rounded-full size-16 mb-4"
         src="public/Imagen.png"
         alt="foto de perfil"
       />
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-regular flex flex-row gap-x-4 pb-4 lg:pb-10"
+        class="dark:text-white text-3xl md:text-4xl lg:text-5xl font-regular flex flex-row gap-x-4 pb-4 lg:pb-10"
       >
         Hey! Soy Raúl 👋 <a
           href="https://www.linkedin.com/in/raultc/"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105 transition"
         >
           <Badge>Disponible para trabajar</Badge>
         </a>
@@ -52,9 +52,9 @@ import SocialPill from "@/components/Icons/SocialPill.astro";
           <Github class="size-4 md:size-6" />
           GitHub
         </SocialPill>
-        <SocialPill href="https://github.com/rltorresc">
+        <SocialPill href="mailto:rtorrelis782@gmail.com">
           <Mail class="size-4 md:size-6" />
-          rtorrelis782@gmail.com
+          Contáctame
         </SocialPill>
       </nav>
     </Section>
@@ -76,7 +76,7 @@ import SocialPill from "@/components/Icons/SocialPill.astro";
     <Section id="sobre-mi">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
         <Profile class="size-7" />
-        Sobre mi
+        Sobre mí
       </h2>
       <AboutMe />
     </Section>
