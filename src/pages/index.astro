@@ -21,42 +21,49 @@ import SocialPill from "@/components/Icons/SocialPill.astro";
 >
   <main class="px-4">
     <Section class="py-44 pb-32">
-      <img
-        class="rounded-full size-16 mb-4"
-        src="public/Imagen.png"
-        alt="foto de perfil"
-      />
-      <h1
-        class="dark:text-white text-3xl md:text-4xl lg:text-5xl font-regular flex flex-row gap-x-4 pb-4 lg:pb-10"
-      >
-        Hey! Soy Raúl 👋 <a
-          href="https://www.linkedin.com/in/raultc/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex justify-center items-center hover:scale-105 transition"
+      <div class="max-w-xl">
+        <div class="flex gap-4 mb-4">
+          <img
+            class="rounded-2xl size-16 mb-4"
+            src="/Imagen.png"
+            alt="foto de perfil"
+          />
+          <a
+            href="https://www.linkedin.com/in/raultc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex justify-center items-center hover:scale-105 transition"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </a>
+        </div>
+        <h1
+          class="dark:text-neutral-100 text-3xl md:text-4xl lg:text-4xl font-regular flex flex-row gap-x-4 pb-4 lg:pb-10"
         >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl text-wrap font-thin max-w-[700]">
-        Desarrollador Web, apasionado por la tecnología y entusiasta del buen
-        diseño.
-      </h2>
+          Hey! Soy Raúl 👋
+        </h1>
+        <h2
+          class="text-xl lg:text-xl text-wrap max-w-[60ch] dark:[&>strong]:text-orange-500 [&>strong]:text-orange-400"
+        >
+          <strong>Desarrollador de aplicaciones Web</strong> de Sevilla, España 🇪🇸.
+          Especializado en el desarrollo de aplicaciones web únicas.
+        </h2>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/raultc/">
-          <LinkIn class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/rltorresc">
-          <Github class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:rtorrelis782@gmail.com">
-          <Mail class="size-4 md:size-6" />
-          Contáctame
-        </SocialPill>
-      </nav>
+        <nav class="flex gap-4 mt-8 flex-wrap">
+          <SocialPill href="https://www.linkedin.com/in/raultc/">
+            <LinkIn class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/rltorresc">
+            <Github class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:rtorrelis782@gmail.com">
+            <Mail class="size-4 md:size-6" />
+            Contáctame
+          </SocialPill>
+        </nav>
+      </div>
     </Section>
     <Section id="experiencia">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
