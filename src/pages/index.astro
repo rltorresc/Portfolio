@@ -13,6 +13,7 @@ import Profile from "@/components/Icons/Profile.astro";
 import Projects from "@/components/Projects.astro";
 import Section from "@/components/Section.astro";
 import SocialPill from "@/components/Icons/SocialPill.astro";
+import CvIcon from "@/components/Icons/CvIcon.astro";
 ---
 
 <Layout
@@ -61,6 +62,13 @@ import SocialPill from "@/components/Icons/SocialPill.astro";
           <SocialPill href="mailto:rtorrelis782@gmail.com">
             <Mail class="size-4 md:size-6" />
             Contáctame
+          </SocialPill>
+          <SocialPill
+            href="public/RaulTorresCV.pdf"
+            download="RaulTorresCV.pdf"
+          >
+            <CvIcon class="size-4 md:size-6" />
+            Descargar CV
           </SocialPill>
         </nav>
       </div>
